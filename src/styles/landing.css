@@ -1,0 +1,363 @@
+/**
+ * Estilos estructurales de la landing Eficia.
+ */
+
+.important {
+  color: var(--color-danger);
+}
+
+.landing-page {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.landing-container {
+  width: 100%;
+  max-width: 1126px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    padding-inline: 16px;
+  }
+}
+
+.landing-card {
+  background-color: var(--color-bg-secondary);
+}
+
+/* Bordes de sección */
+.landing-bordered {
+  border: 2px solid var(--color-border, #e2e8f0);
+}
+
+.landing-bordered-inner {
+  border: 2px solid var(--color-border, #e2e8f0);
+}
+
+.landing-divider {
+  border: none;
+  border-top: 1px solid black;
+  margin: 0;
+}
+
+.landing-placeholder {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px dashed var(--color-border, #e2e8f0);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary, #546173);
+}
+
+/* ——— Header ——— */
+.landing-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
+  backdrop-filter: blur(6px);
+}
+
+.landing-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 16px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.landing-header__logo {
+  height: 80px;
+  width: auto;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.landing-header__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+
+.landing-header__nav-list a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .landing-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .landing-header__nav-list {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* ——— Hero ——— */
+.landing-hero {
+  background-color: var(--color-footer-bg);
+}
+
+.landing-hero__content {
+  line-height: 1;
+}
+
+.landing-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding-block: 2px;
+}
+
+.landing-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.landing-hero__media {
+  width: 50%;
+  /* Ocupa la mitad del contenedor */
+  height: auto;
+  /* Mantiene la proporción original automáticamente */
+}
+
+@media (max-width: 1024px) {
+  .landing-hero__grid {
+    grid-template-columns: 1fr;
+    padding-block: 32px;
+  }
+
+  .landing-hero__media {
+    order: -1;
+  }
+}
+
+/* ——— Secciones genéricas ——— */
+.landing-section {
+  padding-block: 48px;
+}
+
+.landing-section__subtitle {
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .landing-section {
+    padding-block: 32px;
+  }
+}
+
+/* Tarjetas: 3 y 6 columnas responsive */
+.landing-cards {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.landing-cards--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.landing-cards--6 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.landing-card {
+  padding: 16px;
+}
+
+@media (max-width: 1024px) {
+  .landing-cards--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .landing-cards--6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .landing-cards--3,
+  .landing-cards--6 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Split texto / estadísticas */
+.landing-split {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 24px;
+  margin-top: 16px;
+  align-items: start;
+}
+
+.landing-stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.landing-stat {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 1024px) {
+  .landing-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pasos (3 columnas) */
+.landing-steps {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  counter-reset: none;
+}
+
+.landing-step {
+  padding: 16px;
+}
+
+.landing-step__number {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1024px) {
+  .landing-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .landing-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ——— Contacto ——— */
+.landing-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.landing-contact__info {
+  display: grid;
+  gap: 4px;
+  margin-top: 20px;
+}
+
+.landing-contact__block {
+  padding: 10px;
+}
+
+.landing-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.landing-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.landing-form__field--checkbox {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.landing-form__optional {
+  font-weight: normal;
+  font-size: 0.875em;
+}
+
+@media (max-width: 1024px) {
+  .landing-contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ——— Footer ——— */
+.landing-footer {
+  padding-block: 32px;
+  margin-top: auto;
+  background-color: var(--color-footer-bg);
+}
+
+.landing-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.landing-footer__heading {
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+
+.landing-footer__links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .landing-footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CTAs: sin estilo visual extra (solo estructura) */
+.landing-cta {
+  cursor: pointer;
+  padding: 10px 16px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  background: var(--color-secondary);
+  font: inherit;
+}

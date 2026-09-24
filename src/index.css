@@ -1,0 +1,87 @@
+:root {
+  --color-primary: #F47C20;
+  --color-secondary: #123B5D;
+  --color-accent: #F2AF25;
+  --color-accent-secondary: #1E6A8A;
+  --color-danger: #eb081f;
+  --color-warning: #ffc107;
+  --color-bg: #F8FAFC;
+  --color-bg-secondary: #FAFAFA;
+  --color-text: #17212B;
+  --color-text-secondary: #546173;
+  --color-border: #E2E8F0;
+  --color-link: #557dff;
+  --color-link-hover: #0d0ab1;
+  --color-footer-bg: #E2E6E9;
+  --font-main: 'Inter', sans-serif;
+
+  font: 18px/145% var(--font-main);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+p,
+span,
+li {
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-size: 18px;
+}
+
+span {
+  font-size: 14px;
+}
