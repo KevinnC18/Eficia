@@ -2,7 +2,7 @@
  * Hero (bloque inicial bajo el header).
  * - Título principal (H1) y subtítulo de propuesta de valor.
  * - Imagen destacada.
- * - Dos CTAs: acción primaria y secundaria (ej. contacto / ver cómo funciona).
+ * - Dos CTAs: acción primaria y secundaria.
  */
 export function Hero() {
   return (
@@ -13,17 +13,21 @@ export function Hero() {
           <p className="landing-hero__subtitle">Analizamos tu consumo actual, detectamos los cobros indebidos de las comercializadoras y te conseguimos la tarifa más barata del mercado español.</p>
 
           <div className="landing-hero__actions">
-            <button type="button" className="landing-cta landing-cta--primary">
-              Solicitar consula gratuita
-            </button>
-            <button type="button" className="landing-cta landing-cta--secondary" >
-              Conoce cómo funciona
-            </button>
+            <a href="#como-funciona" className="landing-cta landing-cta--primary">
+              Cómo funciona
+            </a>
+            <a href="#contacto" className="landing-cta landing-cta--secondary">
+              Solicitar auditoría gratuita
+            </a>
           </div>
         </div>
 
         <figure className="landing-hero__media">
-          <img src="https://images.unsplash.com/photo-1713942590404-d6981e63fb56?w=900&h=900&fit=crop&auto=format" alt="Familia revisando su factura de energía en el sofá" />
+          <img
+            className="landing-hero__image"
+            src="https://images.unsplash.com/photo-1713942590404-d6981e63fb56?w=640&h=480&fit=crop&auto=format"
+            alt="Familia revisando su factura de energía en el sofá"
+          />
         </figure>
       </div>
     </section>

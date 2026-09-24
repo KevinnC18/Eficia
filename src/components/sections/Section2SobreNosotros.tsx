@@ -1,24 +1,9 @@
-/**
- * Sección 2 — Sobre nosotros (id: #sobre-nosotros).
- * Estructura: título + columna izquierda (texto narrativo) + columna derecha (estadísticas).
- */
-const NOSOTROS = [{
-  title: "30+",
-  description: "Comercializadoras comparadas"
-},
-{
-  title: "€347",
-  description: "Ahorro medio anual por hogar"
-},
-{
-  title: "3.000+",
-  description: "Clientes asesorados"
-},
-{
-  title: "100%",
-  description: "Auditorías sin coste"
-}
-]
+const NOSOTROS = [
+  { value: '30+', label: 'comercializadoras en el mercado' },
+  { value: '€347', label: 'ahorro medio por hogar' },
+  { value: '3.000+', label: 'clientes satisfechos' },
+  { value: '100%', label: 'auditoría de ahorro' },
+] as const
 
 export function Section2SobreNosotros() {
   return (
@@ -32,14 +17,21 @@ export function Section2SobreNosotros() {
 
         <div className="landing-split">
           <div className="landing-split__text">
-            <p>En Eficia no vendemos energía. Somos consultores independientes. Revisamos al detalle tus facturas recientes, comparamos entre más de 30 comercializadoras en España y negociamos las mejores condiciones para tu hogar o negocio.</p>
+            <p>
+              En Eficia no vendemos energía. Somos consultores independientes. Revisamos al detalle tus
+              facturas recientes, comparamos entre más de 30 comercializadoras en España y negociamos las
+              mejores condiciones para tu hogar o negocio.
+            </p>
+            <p>
+              Sin letra pequeña, sin permanencias ocultas. Solo ahorro real y transparente para tu bolsillo.
+            </p>
           </div>
 
           <ul className="landing-stats" aria-label="Estadísticas">
-            {NOSOTROS.map((beneficio, i) => (
-              <li key={i} className="landing-card">
-                <h3>{beneficio.title}</h3>
-                <p>{beneficio.description}</p>
+            {NOSOTROS.map((beneficio) => (
+              <li key={beneficio.value} className="landing-stat">
+                <span className="landing-stat__value">{beneficio.value}</span>
+                <span className="landing-stat__label">{beneficio.label}</span>
               </li>
             ))}
           </ul>
